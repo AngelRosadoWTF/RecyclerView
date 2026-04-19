@@ -1,2 +1,28 @@
 package com.example.recyclerview
 
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
+class GridActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_grid)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        val items = getItems()
+        recyclerView.adapter = Adapter(items)
+    }
+
+    private fun getItems(): List<Item> {
+        return listOf(
+            Item("París, Francia", R.drawable.img1),
+            Item("Madrid, España", R.drawable.img2),
+            Item("Berlín, Alemania", R.drawable.img3),
+            Item("Londres, Inglaterra", R.drawable.img4),
+            Item("Roma, Italia", R.drawable.img5),
+            Item("Copenhague, Dinamarca", R.drawable.img6)
+        )
+    }
+}
