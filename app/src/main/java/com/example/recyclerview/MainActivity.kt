@@ -10,8 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btnGrid = findViewById<Button>(R.id.btnGrid)
+        val btnStaggered = findViewById<Button>(R.id.btnStaggered)
         btnGrid.setOnClickListener {
             startActivity(Intent(this, GridActivity::class.java))
+        }
+        btnStaggered.setOnClickListener {
+            startActivity(Intent(this, StaggeredActivity::class.java))
         }
     }
 }
