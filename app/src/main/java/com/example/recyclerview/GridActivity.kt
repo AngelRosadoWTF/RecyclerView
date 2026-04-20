@@ -27,7 +27,13 @@ class GridActivity : AppCompatActivity() {
             Item("Berlín, Alemania", R.drawable.img3),
             Item("Londres, Inglaterra", R.drawable.img4),
             Item("Roma, Italia", R.drawable.img5),
-            Item("Copenhague, Dinamarca", R.drawable.img6)
+            Item("Copenhague, Dinamarca", R.drawable.img6),
+            Item("Lisboa, Portugal", R.drawable.img7),
+            Item("Dublín, Irlanda", R.drawable.img8),
+            Item("Oslo, Noruega", R.drawable.img9),
+            Item("Atenas, Grecia", R.drawable.img10),
+            Item("Budapest, Hungría", R.drawable.img11),
+            Item("Berna, Suiza", R.drawable.img12)
         )
     }
 }
