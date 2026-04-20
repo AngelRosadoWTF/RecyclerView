@@ -11,7 +11,7 @@ class GridActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grid)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        recyclerView.layoutManager = GridLayoutManager(this, 3)
         val items = getItems()
         recyclerView.adapter = Adapter(items)
         val btnBack = findViewById<Button>(R.id.btnBack)
