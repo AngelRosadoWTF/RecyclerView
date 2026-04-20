@@ -1,6 +1,7 @@
 package com.example.recyclerview
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,10 @@ class GridActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         val items = getItems()
         recyclerView.adapter = Adapter(items)
+        val btnBack = findViewById<Button>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun getItems(): List<Item> {
